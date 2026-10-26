@@ -21,7 +21,7 @@ A clean, responsive, and feature-rich Kanban Board web application designed for 
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/LostUchiha05/your-repo-name.git](https://github.com/LostUchiha05/your-repo-name.git)
+   git clone [https://github.com/LostUchiha05/your-repo-name.git](https://github.com/LostUchiha05/Kanban-Board.git)
 
 
    
