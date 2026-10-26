@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="board.css">
+    <script src="https://kit.fontawesome.com/f3e9ed7a80.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="heading">
+        <h1>Kanban Board</h1>
+    </div>
+    <div class="navigation">
+        <div class="nav">
+        <nav class="nav-bar">
+            <ol>
+                <li><a href="#boards">Boards</a></li>
+                <li><a href="#Peoples">Peoples</a></li>
+                <li><a href="#Tasks">Tasks</a></li>
+                <li><a href="#About">About</a></li>
+            </ol>
+        </nav>
+        </div>
+    </div>
+    <div class="profile">
+        <h4>Profile</h4>
+    </div>
+    <div class="second-nav">
+    <div class="select-Board">
+        <label for="Boards">Working Board</label>
+        <select>
+            <option value="board1">board1</option>
+            <option value="board2">board2</option>
+            <option value="board3">board3</option>
+            <option value="board4">board4</option>
+            
+        </select>
+    </div>
+    <div class="inputing-card">    
+        <input type="text" placeholder="card-name" id="add-new-board-field">
+        <button id="add-new-board-btn">+</button>
+    </div>
+    </div>
+    <div class="Workspace drop-zone" id="Workspace" >
+        <div class="workspace-header">
+            <h1 id="running-board">Board1</h1>
+            <div class="gap-div">
+                <label for="gap-slider">Column Gap: </label>
+                <input type="range" id="gap-slider" min="10" max="80" value="20">
+                <span id="gap-value">20px</span>
+            </div>
+        </div>
+
+        <div id="BoardContainer" class="board-container">
+            <div class="boards" id="boards" draggable="false">
+            <div class="heading-bar">
+                <div class="grip">
+                    <i class="fa-solid fa-grip"></i>
+                </div>
+                <h1 id="card-name">To Do</h1>
+            </div>
+            <hr>
+                <div class="input-field" id="input-field">
+                    <input type="text">
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="board.js"></script>
+</body>
+</html>
