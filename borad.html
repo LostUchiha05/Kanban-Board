@@ -6,6 +6,7 @@
     <title>Kanban Board</title>
     <link rel="stylesheet" href="board.css">
     <script src="https://kit.fontawesome.com/f3e9ed7a80.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 </head>
 <body>
     <div class="heading">
@@ -26,7 +27,7 @@
     <div class="profile">
         <h4>Profile</h4>
     </div>
-    <div class="second-nav">
+    <div class="second-nav"> 
     <div class="select-Board">
         <label for="Boards">Working Board</label>
         <select>
@@ -46,24 +47,28 @@
         <div class="workspace-header">
             <h1 id="running-board">Board1</h1>
             <div class="gap-div">
-                <label for="gap-slider">Column Gap: </label>
+                <label for="gap-slider">Column Gap:</label>
                 <input type="range" id="gap-slider" min="10" max="80" value="20">
                 <span id="gap-value">20px</span>
             </div>
         </div>
 
         <div id="BoardContainer" class="board-container">
-            <div class="boards" id="boards" draggable="false">
+            <div class="boards" id="boards">
             <div class="heading-bar">
-                <div class="grip">
+                <div class="grip" id="grip">
                     <i class="fa-solid fa-grip"></i>
                 </div>
                 <h1 id="card-name">To Do</h1>
             </div>
             <hr>
+                <div class="list">
+                    <div class="card">1</div>
+                    <div class="card">2</div>
+                </div>
                 <div class="input-field" id="input-field">
                     <input type="text">
-                    <button>+</button>
+                    <button id="add-card-btn">+</button>
                 </div>
             </div>
         </div>

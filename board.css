@@ -60,12 +60,12 @@ body{
     display: flex;
     margin-top: 20px;
     border: 1px solid #333;
-    width: 460px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     text-align: center; 
     font-size: 30px;
-    padding: 8px 2px 8px 2px;
+    padding: 8px 0px 8px 0px;
     border-radius: 2rem;
     background-color: #ecf1eb;
     box-shadow: 2px 2px 11px rgb(1, 83, 110);
@@ -75,9 +75,8 @@ body{
     margin-top: 6px;
 }
 .select-Board select{
-    display: inline;
     margin-left: 90px;
-    width: 150px;
+    width: 100px;
     height: 40px;
     padding: 8px;
     border-radius: 2rem;
@@ -243,20 +242,22 @@ input[type="range"] {
     transform: scale(1.08);
     color:green;
 }
-
-.card-list{
-    background-color: white;
-    color: #333;
-    padding: 1rem;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    cursor: grab;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-} 
-
-.card-list:active{
-    cursor: grabbing;
-    transform:scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 5px;
 }
+
+
+.card{
+    width: 90%;
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    border-radius: 2rem;
+}
+
+
+
