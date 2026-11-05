@@ -75,15 +75,12 @@ function addNewBoard(){
 
     inputfield.classList.add("input-field")
     newboard.appendChild(inputfield)
-
-
-
-
     addboardfield.value = "";
 }
 
 
 Sortable.create(boardContainer,{
+    handle:'.fa-grip',
     animation:150,
     ghostClass:'dragging'
 })

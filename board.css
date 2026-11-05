@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(130deg,#B7D1DA,#E2E8DD);
+    background: linear-gradient(70deg,#14110F,#87e43b);
     min-height: 100vh;
 }
 .heading{
@@ -59,7 +59,7 @@ body{
 .select-Board{
     display: flex;
     margin-top: 20px;
-    border: 1px solid #333;
+    color: #e3e4e8;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -67,8 +67,8 @@ body{
     font-size: 30px;
     padding: 8px 0px 8px 0px;
     border-radius: 2rem;
-    background-color: #ecf1eb;
-    box-shadow: 2px 2px 11px rgb(1, 83, 110);
+    background-color: #14110F;
+    box-shadow: 2px 2px 11px rgb(7, 7, 7);
 }
 .select-Board label{
     margin-left: 15px;
@@ -80,7 +80,7 @@ body{
     height: 40px;
     padding: 8px;
     border-radius: 2rem;
-    background-color:#4fb6e6d3;
+    background-color:hsla(93, 77%, 52%, 0.726);
     border-color: #0A2239;
     font-size: large;
 }
@@ -93,6 +93,8 @@ body{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #14110F;
+    border-radius: 2rem;
 }
 
 .inputing-card input{
@@ -101,6 +103,9 @@ body{
     border-radius: 2rem;
     border: none;
     font-size: large;
+    background-color: #14110F;
+    color: #87e43b;
+
 }
 .inputing-card button{
     width: 50px;
@@ -113,10 +118,13 @@ body{
     right: 0;
     aspect-ratio: 1;
     transition: background-color 1s ease;
+    background-color: #87e43b;
 }
 .inputing-card button:hover{
-    background-color: #1d85b598;
+    background-color: hsla(24, 14%, 7%, 0.884);
+    color: #87e43b;
 }
+
 
 .Workspace{
     width: 95%;
@@ -127,8 +135,7 @@ body{
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.3);
     overflow: auto;
-    position: relative;
-    cursor: grab; 
+    position: relative; 
     --board-gap: 20px;
 }
 .Workspace:active {
@@ -174,8 +181,11 @@ input[type="range"] {
 .grip{
     color: #333333a1;
     font-size: 20px;
+    cursor: grab;
 }
-
+.grip:active{
+    cursor: grabbing;
+}
 .board-container {
     display: flex;
     gap: var(--board-gap); /* Controlled dynamically */
@@ -187,7 +197,6 @@ input[type="range"] {
 
 .boards{
     display: flex;
-
     min-width: max-content;
     background-color: #e3e4e8;
     flex-direction: column;
@@ -196,13 +205,11 @@ input[type="range"] {
     min-height: 400px;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: grab;
     transition: transform 0.2s ease, opacity 0.2s ease;
 
 }
 .boards.dragging {
     opacity: 0.4;
-    cursor: grabbing;
 }
 .boards h1{
     color:#555;
