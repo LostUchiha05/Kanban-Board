@@ -6,6 +6,10 @@ const headingBoard = document.getElementById('card-name')
 const inputfield = document.getElementById('input-field')
 const workspace = document.querySelector(".drop-zone")
 const boards = document.querySelectorAll('.boards')
+
+
+
+//Event Listener
 addboardbtn.addEventListener("click",addNewBoard)
 
 
@@ -68,6 +72,7 @@ function addNewBoard(){
     const button = document.createElement('button')
     
     button.classList.add('add-card-btn')
+
     input.type = 'text';
     input.placeholder = 'Add card...'
     button.textContent = "+"
@@ -76,6 +81,8 @@ function addNewBoard(){
     inputfield.classList.add("input-field")
     newboard.appendChild(inputfield)
     addboardfield.value = "";
+
+    return list
 }
 
 
@@ -86,3 +93,36 @@ Sortable.create(boardContainer,{
 })
 
 
+//Events Delegation
+boardContainer.addEventListener('click',(event)=>{
+    const btn = event.target.closest('button');
+    if (!btn) return; 
+    const parentContainer = btn.closest('.boards'); 
+    if (parentContainer) {
+        const parentId = parentContainer.id;
+        console.log("The clicked button's parent ID is:", parentId);
+
+        addCardToBoard(parentContainer);
+    }
+})
+
+
+
+function addCardToBoard(parentContainer){
+    const input = parentContainer.querySelector('input')
+    const list = parentContainer.querySelector('.list')
+
+    const value = input.value
+    console.log(value);
+    console.log(list);
+
+    const card = document.createElement('div')
+    card.classList.add('card')
+    const CarduniqueId =  'card-'+ Date.now() 
+    card.id = CarduniqueId
+
+    list.appendChild(card)
+    card.textContent = input.value;
+
+    input.value = " "
+}

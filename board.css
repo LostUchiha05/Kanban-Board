@@ -138,9 +138,9 @@ body{
     position: relative; 
     --board-gap: 20px;
 }
-.Workspace:active {
+/* .Workspace:active {
     cursor: grabbing;
-}
+} */
 
 .Workspace h1{
     text-align: center;
@@ -264,6 +264,7 @@ input[type="range"] {
     text-align: center;
     padding: 4px;
     border-radius: 2rem;
+    color: green;
 }
 
 
