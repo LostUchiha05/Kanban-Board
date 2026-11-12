@@ -82,6 +82,12 @@ function addNewBoard(){
     newboard.appendChild(inputfield)
     addboardfield.value = "";
 
+    new Sortable(list,{
+        group:'shared-cards',
+        animation:150,
+        ghostClass:'dragging'
+    });
+
     return list
 }
 
@@ -126,3 +132,4 @@ function addCardToBoard(parentContainer){
 
     input.value = " "
 }
+

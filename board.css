@@ -217,9 +217,29 @@ input[type="range"] {
     font-size: 1.5rem;
 }
 
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 150px; /* Gives the list a tall drop area even when empty */
+    flex-grow: 1;
+    align-items: center;
+    margin-top: 5px;
+    max-width: 100%;
+    margin-bottom: auto;
+}
+
+.card{
+    width: 90%;
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    border-radius: 2rem;
+    color: green;
+    transition: all 0.3s ease;
+}
 
 .input-field{
-    margin-top: auto;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -249,23 +269,10 @@ input[type="range"] {
     transform: scale(1.08);
     color:green;
 }
-.list{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    margin-top: 5px;
-}
 
 
-.card{
-    width: 90%;
-    background-color: white;
-    text-align: center;
-    padding: 4px;
-    border-radius: 2rem;
-    color: green;
-}
+
+
 
 
 
